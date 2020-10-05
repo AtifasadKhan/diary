@@ -1,0 +1,26 @@
+
+
+<%- include('partials/header') %>
+<div class= "ui main text container segment">
+	<div class = "ui huge header">
+		My Day!!!!!!!!!
+	</div>
+	<form class="ui form" action="/home" method = "POST">
+		<div class="field">
+			<label>Special event:</label>
+		<input type ="text" name="subj[name]" placeholder="Enter the special event">
+		</div>
+		
+		<div class="field">
+			<label>Your Day	:</label>
+	<textArea  name="subj[body]"></textArea>
+		</div>
+		<input class = "ui voilet basic button "  type ="submit">
+	</form>
+</div>
+
+
+
+
+
+<%- include('partials/footer') %>

@@ -1,0 +1,35 @@
+
+<%- include('partials/header') %>
+<div class= "ui main text container segment">
+	<div class = "ui huge header">Diary </div>
+		<div class = "ui top attached segment">
+			<div class = "ui divided items">
+				<%data.forEach(function(nikal){%>
+					<div class = "item">
+					<div class = "content">
+	<h2>
+		
+				<a class = " header" href="/home/<%=nikal._id%>"><%= nikal.name%></a>	
+				</h2>
+				<div class = "description">
+								<!-- to limit number of char -->
+								<p><%= nikal.body%></p>
+							</div>
+				<div class = "meta center">
+							<span><%= nikal.created.toDateString()%></span>
+						</div>
+						<div class = "extra">
+							<a class = "ui floated basic violet button" href="/home/<%=nikal._id%>">
+								Read More....
+								<i class = "right chevron icon"></i>
+							</a>		
+						</div>
+					</div>
+				</div>
+				<% }) %>
+			</div>
+		</div>
+	
+</div>
+
+<%- include('partials/footer') %>
